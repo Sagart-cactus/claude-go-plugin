@@ -6,8 +6,8 @@
     "name": "Trivedi"
   },
   "license": "MIT",
-  "homepage": "https://github.com/Sagart-cactus/claude-go-devx-plugin",
-  "repository": "https://github.com/Sagart-cactus/claude-go-devx-plugin",
+  "homepage": "https://github.com/Sagart-cactus/claude-go-plugin",
+  "repository": "https://github.com/Sagart-cactus/claude-go-plugin",
   "commands": "./commands",
   "skills": "./skills",
   "hooks": "./hooks/hooks.json"
