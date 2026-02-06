@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-02-07
+
+### Fixed
+- Remove duplicate hooks declaration from plugin.json - `hooks/hooks.json` is automatically loaded by Claude, so it shouldn't be declared in the manifest to avoid "Duplicate hooks file detected" error
+
 ## [0.1.0] - 2026-02-07
 
 ### Added
@@ -55,4 +60,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Skill descriptions shortened to under 70 characters for better triggering
 - CI pipeline now includes security scanning as Stage 4
 
+[0.1.1]: https://github.com/Sagart-cactus/claude-go-plugin/releases/tag/v0.1.1
 [0.1.0]: https://github.com/Sagart-cactus/claude-go-plugin/releases/tag/v0.1.0

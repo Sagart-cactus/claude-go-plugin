@@ -1,6 +1,6 @@
 {
   "name": "go",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Opinionated Go development plugin with fast feedback loops and breakpoint-first debugging.",
   "author": {
     "name": "Trivedi"
