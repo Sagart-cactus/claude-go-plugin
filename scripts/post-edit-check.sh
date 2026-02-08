@@ -12,14 +12,15 @@ fi
 changed_go=()
 while IFS= read -r file; do
   [[ -n "$file" ]] && changed_go+=("$file")
-done < <(git diff --name-only -- '*.go' | head -n 20)
+done < <(git diff --name-only | grep '\.go$' | head -n 20)
 if [[ "${#changed_go[@]}" -eq 0 ]]; then
   exit 0
 fi
 
-echo "[go] Go files changed. Recommended loop:"
-echo "  1) ./scripts/test-fast.sh"
-echo "  2) ./scripts/lint.sh"
-echo "  3) ./scripts/debug-test.sh <pkg> <regex>  # when a test fails"
-echo "  4) ./scripts/coverage-report.sh  # check test coverage"
+# Output JSON so Claude Code surfaces it as context (plain stdout is hidden for PostToolUse)
+cat <<'JSON'
+{
+  "additionalContext": "[go] Go files changed. Run the feedback loop: 1) ./scripts/test-fast.sh 2) ./scripts/lint.sh 3) ./scripts/debug-test.sh <pkg> <regex> (when a test fails) 4) ./scripts/coverage-report.sh (check test coverage)"
+}
+JSON
 exit 0
