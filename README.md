@@ -2,6 +2,10 @@
 
 Opinionated Claude plugin for Go development with a practical debug-and-feedback loop.
 
+<p align="center">
+  <img src="assest/demo.gif" alt="Plugin demo" />
+</p>
+
 ## Installation
 
 ### Option 1: Install from GitHub (Recommended)
